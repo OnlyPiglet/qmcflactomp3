@@ -28,7 +28,6 @@ public class SingleTask implements Runnable {
     public void run() throws ThreadException{
         try {
             while (isRun) {
-                System.out.println(Thread.currentThread().getName());
                 String filename = multithreads.Queue.getFile();
                 if (filename == null) {
                     isRun = false;
@@ -41,7 +40,6 @@ public class SingleTask implements Runnable {
                 for (int i = 0; i < buffer.length; ++i) {
                     buffer[i] = (byte) (dc.NextMask() ^ buffer[i]);
                 }
-                System.out.println(filename);
                 FileOutputStream fos = new FileOutputStream(new File(filename.replace(".qmcflac",".mp3")));
                 fos.write(buffer);
                 fos.flush();
