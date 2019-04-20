@@ -18,7 +18,7 @@ public class SingleTask implements Runnable {
 
     private CountDownLatch cl;
 
-    private volatile  boolean isRun = true;
+    private volatile boolean isRun = true;
 
     public SingleTask(CountDownLatch cl){
         this.cl = cl;
@@ -26,9 +26,9 @@ public class SingleTask implements Runnable {
 
     @Override
     public void run() throws ThreadException{
-
+        try {
             while (isRun) {
-                try {
+                System.out.println(Thread.currentThread().getName());
                 String filename = multithreads.Queue.getFile();
                 if (filename == null) {
                     isRun = false;
@@ -41,19 +41,20 @@ public class SingleTask implements Runnable {
                 for (int i = 0; i < buffer.length; ++i) {
                     buffer[i] = (byte) (dc.NextMask() ^ buffer[i]);
                 }
+                System.out.println(filename);
                 FileOutputStream fos = new FileOutputStream(new File(filename.replace(".qmcflac",".mp3")));
                 fos.write(buffer);
                 fos.flush();
                 fos.close();
                 fis.close();
-                }catch ( IOException e){
-                    //在发生异常时弹出警告
-                    throw new ThreadException(e);
-                }finally {
-                    cl.countDown();
-                    isRun = false;
-                }
             }
+        }catch ( IOException e){
+            //在发生异常时弹出警告
+            throw new ThreadException(e);
+        }finally {
+            cl.countDown();
+            isRun = false;
+        }
     }
 
 }

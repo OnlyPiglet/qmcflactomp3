@@ -52,6 +52,8 @@ public class FileChooser extends JFrame implements ActionListener{
                     Queue.addFiles(file.getAbsolutePath());
                 }
             }
+//
+            System.out.println( files.length);
             new Thread(new SignleTaskStartEngine()).start();
         }
 
