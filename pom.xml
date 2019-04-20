@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.onlypiglet.flactomp3</groupId>
-    <artifactId>flactomp3-all</artifactId>
+    <artifactId>qmcflactomp3-all</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <build>
         <plugins>
