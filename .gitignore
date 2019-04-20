@@ -6,5 +6,6 @@ target/maven-archiver/
 target/archive-tmp/
 target/generated-sources/
 target/classes/
+target/qmcfalc2mp3.docx
 .idea/
 flactomp3.iml
