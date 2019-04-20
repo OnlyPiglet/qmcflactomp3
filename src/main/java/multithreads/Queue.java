@@ -1,3 +1,5 @@
+package multithreads;
+
 import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -5,7 +7,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * @ProjectName: flactomp3
  * @Package: PACKAGE_NAME
- * @ClassName: Queue
+ * @ClassName: multithreads.Queue
  * @Author: 吴成昊
  * @Description:
  * @Date: 2019/4/17 23:30

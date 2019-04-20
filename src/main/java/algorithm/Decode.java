@@ -1,7 +1,9 @@
+package algorithm;
+
 /**
  * @ProjectName: flactomp3
  * @Package: PACKAGE_NAME
- * @ClassName: Decode
+ * @ClassName: algorithm.Decode
  * @Author: 吴成昊
  * @Description:
  * @Date: 2019/4/17 17:26
@@ -25,7 +27,7 @@ public class Decode {
             {0x00, 0x09, 0x5b, 0x9f, 0x62, 0x66, 0xa1}
     };
 
-    int NextMask(){
+    public int NextMask(){
         int ret;
         index++;
         if(x<0)

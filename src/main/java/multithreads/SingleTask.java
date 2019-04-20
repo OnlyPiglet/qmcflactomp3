@@ -1,3 +1,5 @@
+package multithreads;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
@@ -6,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * @ProjectName: flactomp3
  * @Package: PACKAGE_NAME
- * @ClassName: SingleTask
+ * @ClassName: multithreads.SingleTask
  * @Author: 吴成昊
  * @Description:
  * @Date: 2019/4/17 17:33
@@ -23,20 +25,19 @@ public class SingleTask implements Runnable {
     }
 
     @Override
-    public void run() {
+    public void run() throws ThreadException{
 
             while (isRun) {
                 try {
-                String filename = Queue.getFile();
+                String filename = multithreads.Queue.getFile();
                 if (filename == null) {
-                    System.out.println("isRun over");
                     isRun = false;
                     break;
                 }
                 FileInputStream fis = new FileInputStream(new File(filename));
                 byte[] buffer = new byte[fis.available()];
                 fis.read(buffer);
-                Decode dc = new Decode();
+                algorithm.Decode dc = new algorithm.Decode();
                 for (int i = 0; i < buffer.length; ++i) {
                     buffer[i] = (byte) (dc.NextMask() ^ buffer[i]);
                 }
@@ -46,13 +47,13 @@ public class SingleTask implements Runnable {
                 fos.close();
                 fis.close();
                 }catch ( IOException e){
-                    Toolkit.getDefaultToolkit().beep();
-                    JOptionPane.showMessageDialog(null, e.getMessage(), "错误信息",JOptionPane.ERROR_MESSAGE);
+                    //在发生异常时弹出警告
+                    throw new ThreadException(e);
+                }finally {
+                    cl.countDown();
+                    isRun = false;
                 }
             }
-            cl.countDown();
-        System.out.println(cl.getCount());
-
     }
 
 }

@@ -1,3 +1,9 @@
+import ui.FileChooser;
+import ui.UiStart;
+
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * @ProjectName: flactomp3
  * @Package: PACKAGE_NAME
@@ -10,7 +16,7 @@
 public class Application {
 
     public static void main(String[] args) {
-        new FileChooser();
+        new Thread(new UiStart()).start();
     }
 
 }

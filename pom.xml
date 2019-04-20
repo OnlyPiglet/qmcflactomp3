@@ -4,12 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>onlyPiglet.tool</groupId>
-    <artifactId>flactomp3</artifactId>
-    <version>alpha</version>
+    <groupId>com.onlypiglet.flactomp3</groupId>
+    <artifactId>flactomp3-all</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
     <build>
         <plugins>
-
+            <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
@@ -34,7 +40,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 

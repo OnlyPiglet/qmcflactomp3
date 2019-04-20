@@ -1,5 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 
-/target
+/target/classes
+/target/generated-sources
+/target/archive-tmp
+/target/maven-archiver
+/target/maven-status
 /.idea
 flactomp3.iml
