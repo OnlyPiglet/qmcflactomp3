@@ -43,7 +43,7 @@ public class FileChooser extends JFrame implements ActionListener{
 
         if(!FileCheck.checkFilesFormat(files)){
             Toolkit.getDefaultToolkit().beep();
-            JOptionPane.showMessageDialog(null, "存在非qmcflac格式的音乐", "错误信息",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "存在非qmcflac格式的音乐"+System.lineSeparator()+"请检查后再次运行", "错误信息",JOptionPane.ERROR_MESSAGE);
         }else{
             for(File file : files){
                 if(file.isDirectory()){

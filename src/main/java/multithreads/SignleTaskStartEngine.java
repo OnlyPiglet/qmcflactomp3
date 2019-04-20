@@ -20,7 +20,6 @@ public class SignleTaskStartEngine implements Runnable{
     @Override
     public void run() {
 
-        ThreadExceptionHandler.setHandler();
         CountDownLatch cl = new CountDownLatch(Resources.Thread_Count);
         for(int i = 0; i< Resources.Thread_Count; i++){
             new Thread(new SingleTask(cl)).start();
