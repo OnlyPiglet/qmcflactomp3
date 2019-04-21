@@ -16,7 +16,6 @@ public class ThreadExceptionHandler   {
 
     public static void setHandler(){
         Thread.setDefaultUncaughtExceptionHandler((t,e)->{
-            e.printStackTrace();
             Toolkit.getDefaultToolkit().beep();
             JOptionPane.showMessageDialog(null, e.getMessage(), "错误信息",JOptionPane.ERROR_MESSAGE);
         });
