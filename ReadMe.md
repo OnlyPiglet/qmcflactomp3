@@ -2,7 +2,7 @@
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
 ![Platform & Version](https://img.shields.io/conda/pn/:channel/:package.svg)
-![jdk>1.7](https://img.shields.io/badge/jdk-%3E1.7-yellow.svg)
+![jdk>=1.7](https://img.shields.io/badge/jdk-%3E%3D1.7-yellowgreen.svg)
 针对腾讯音乐的SQ加密音乐做的一个转换为Mp3的客户端。
 [参考了此C++开源项目](https://github.com/Presburger/qmc-decoder)
 开项目最低支持JDK1.7
