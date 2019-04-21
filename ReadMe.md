@@ -1,4 +1,5 @@
 # :fire::musical_note:QmcFlacToMp3 :musical_note::fire:
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 针对腾讯音乐的SQ加密音乐做的一个转换为Mp3的客户端。
 [参考了此C++开源项目](https://github.com/Presburger/qmc-decoder) 开项目最低支持JDK1.7
 如果喜欢这个项目的话可以:star:或者:two_men_holding_hands:我 项目采用了异步非阻塞多线程技术实现高效并发转换。
