@@ -29,3 +29,17 @@
 * Loadig界面的打开与关闭未做
 * 多线程的内存溢出异常未进行有效的处理
 * 缺少使用教程
+
+# 20190421更新
+## 以优化
+* 添加Loading界面这里参考引用了此两处网站特别指出，还有文件打开也参考了另一篇这里也一起列出，
+  除了ui模块其他模块为作者所写。
+  1. [JFileChooser (Java Swing提供的文件选择对话框)](https://blog.csdn.net/liang5630/article/details/25651491)
+  2. [Wait with style in Swing](http://www.curious-creature.com/2005/02/15/wait-with-style-in-swing/)
+  3. [SwingFX：漂亮进度面板](https://www.javalobby.org//java/forums/t19222.html)  
+     ![新效果图](https://upload-images.jianshu.io/upload_images/13419832-c5f342182b230dc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+* 关于多线程溢出问题只要单曲没有超过90M一般都没有问题。因为理论上没有经过调优的JVM虚拟机的最大堆内存为物理内存的1/4，所以一般2G物理内存，可用500M而我们同时有5个线程
+  所以转换歌曲很多时，5个线程同时工作可分得100M，作者这边留有空余减了10M。理论上歌曲单曲支持大小=物理内存/4/5
+
+# 待优化
+* 缺少使用手册 

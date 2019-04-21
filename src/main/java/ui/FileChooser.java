@@ -52,7 +52,7 @@ public class FileChooser extends JFrame implements ActionListener{
                     Queue.addFiles(file.getAbsolutePath());
                 }
             }
-            new Thread(new SignleTaskStartEngine()).start();
+            new Thread(new SignleTaskStartEngine(this)).start();
         }
 
     }
