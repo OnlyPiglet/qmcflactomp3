@@ -6,7 +6,7 @@
 
     <groupId>com.onlypiglet.qmcflactomp3</groupId>
     <artifactId>qmcflactomp3-all</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <build>
         <plugins>
             <plugin>
