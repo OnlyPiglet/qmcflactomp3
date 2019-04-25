@@ -7,4 +7,5 @@ target/archive-tmp/
 target/generated-sources/
 target/classes/
 .idea/
+_config.yml
 flactomp3.iml
